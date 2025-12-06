@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Venus</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <nav>
+        <div class="logo">HOTEL VENUS</div>
+        <div class="nav-items">
+            <a href="/">Home</a>
+            <a href="/">About Us</a>
+            <a href="/">Rooms</a>
+            <a href="/">Contact</a>
+        </div>
+    </nav>
+    <section class="intropage">
+        <div class="intro-container">
+            <div class="column-left">
+                <h1>Where memories are made, one stay at a time</h1>
+                <p>Indulge in luxury at Hotel Venus.</p>
+                <p>Exclusive offer for new customers only.</p>
+                <button onclick="bookNow()">Book now
+                </button>
+            </div>
+
+            <!--Hotel room information with images and prices-->
+            <div class="column-right">
+                <img src="https://i.imgur.com/WmnLgAJ.jpeg"
+                    alt="hotel recreational area with deckchairs and palm trees">
+                <div class="intro-image"></div>
+            </div>
+        </div>
+    </section>
+
+    <section class="rooms-container" id="room">
+        <h2 class="section-subheader">OUR ROOMS</p>
+            <p class="section-header">Selection of rooms</h>
+            <div id="room-info" class="room-grid">
+                <div class="room-card">
+                    <img src="https://i.imgur.com/1uXDGLy.jpeg" alt="standard room 101" />
+                    <img src="https://i.imgur.com/33yDmpG.jpeg" alt="standard room 102" />
+                    <img src="https://i.imgur.com/t3itNiB.jpeg" alt="standard room 101 bathroom" />
+                    <div class="room-card-details">
+                        <div>
+                            <h4>Standard Rooms</h4>
+                            <p>Designed for those on business trips who need to rest for a night or two.</p>
+                        </div>
+                        <h3>£150<span> per night</span></h3>
+                    </div>
+                </div>
+                <div class="room-card">
+                    <img src="https://i.imgur.com/XiZ46OJ.jpeg" alt="double room 201" />
+                    <img src="https://i.imgur.com/yZdShZC.jpeg" alt="double room 202" />
+                    <img src="https://i.imgur.com/FGcW2gA.jpeg" alt="double room 201 bathroom" />
+                    <div class="room-card-details">
+                        <div>
+                            <h4>Double Room</h4>
+                            <p>Perfect for couples or friends travelling together.</p>
+                        </div>
+                        <h3>£250<span> per night</span></h3>
+                    </div>
+                </div>
+                <div class="room-card">
+                    <img src="https://i.imgur.com/ZxsoCJm.jpeg" alt="deluxe suite with extra amenities" />
+                    <img src="https://i.imgur.com/Izgxtc7.jpeg" alt="deluxe suite bathroom" />
+                    <img src="https://i.imgur.com/I3bDAy0.jpeg" alt="view from deluxe suite balcony" />
+                    <div class="room-card-details">
+                        <div>
+                            <h4>Deluxe Suite</h4>
+                            <p>
+                                More space, upgraded furnishings and additional amenities.
+                            </p>
+                        </div>
+                        <h3>£400<span> per night</span></h3>
+                    </div>
+                </div>
+            </div>
+    </section>
+
+    <!--Room booking section-->
+    <section class="sales-container" id="jump-to-location">
+        <div class="booking-container">
+            <h1>Book your stay today!</h1>
+            <p>New customer? Enter the code WELCOME20 for an exclusive discount of 20% off the total price.</p>
+        </div>
+
+        <div class="booking-form">
+            <div class="customer-info">
+                <label for="name">Your Name</label>
+                <input type="text" id="name" name="customer name" placeholder="Full name" required>
+            </div>
+            <div class="customer-info">
+                <label for="email">Your E-mail</label>
+                <input type="email" id="email" name="customer-email" placeholder="yourname@email.com" required>
+            </div>
+            <div class="customer-info">
+                <label for="phone">Your Phone</label>
+                <input type="tel" id="phone" name="customer_phone" placeholder="+44 123 456 7890" required>
+            </div>
+            <br>
+            <div class="customer-info inlined">
+                <label for="adult">Adults</label>
+                <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+            </div>
+            <div class="customer-info inlined">
+                <label for="child">Children</label>
+                <input type="number" id="child" name="total_children" placeholder="0" min="0" required>
+            </div>
+            <div class="customer-info inlined">
+                <label for="checkin-date">Check-in</label>
+                <input type="date" id="checkin-date" name="checkin" required>
+            </div>
+            <div class="customer-info inlined">
+                <label for="checkout-date">Check-out</label>
+                <input type="date" id="checkout-date" name="checkout" required>
+            </div>
+            <div class="customer-room-selection">
+                <label for="room-selection">Select Room Preference</label>
+
+                <select id="room-selection" name="room_preference" required>
+                    <option value="">Choose a Room from the List</option>
+                    <option value="standard">Standard Room</option>
+                    <option value="double">Double Room</option>
+                    <option value="deluxe">Deluxe Suite</option>
+                </select>
+            </div>
+            <br>
+
+            <!--a checkbox option to add breakfast-->
+            <div class="customer-room-selection">
+                <input type="checkbox" id="breakfast-option" name="breakfast">
+                <label for="breakfast"> Include Breakfast for £20?</label><br>
+
+                <div class="customer-info">
+                    <label for="message">Additonal requirements</label>
+                    <textarea id="message" name="visitor_message"
+                        placeholder="Tell us anything that will assist us to make your stay more comfortable."
+                        required></textarea>
+                </div>
+                <br>
+                <div class="customer-info">
+                    <label for="discount">Discount Code</label>
+                    <input type="text" id="discount" placeholder="Enter discount code here" required>
+                    <br>
+                    <button type="submit" id="submit-booking" onclick="submitBooking()">Submit Booking</button>
+                    </form>
+                </div>
+                <script src="main.js"></script>
+</body>
+
+</html>
