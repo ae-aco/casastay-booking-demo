@@ -6,18 +6,20 @@
 The mock scenario for this project is a hotel web app, where the user can book from a selection of hotel rooms.
 
 ## Checklist for this project
-- Create input fields for user to provide personal details
-- Create input fields for user to provide booking details
-- Include a option for user to opt in for breakfast for an additional fee
-- Include a submit button for the user to confirm their booking.
-- When the submit button is clicked on, an alert should return booking confirmation and the total price.
+- Create input fields for user to provide personal and booking details
+- Capture user input directly from the fields
+- Create a couple of resuable functions
+- Reduce repetition with loops
+- Use console.log and alert to output quick feedback
+- Trigger changes through events
+- Use basic HTML and CSS
 
 ## Files used
 The files can be found in this branch "casastay-booking-demo".
-*index.html*
-*main.js*
-*style.css*
-<br><br>
+*index.html*<br>
+*main.js*<br>
+*style.css*<br>
+<br>
 
 ## Steps required to run the web app/site.
 To see some of the features in action, here's a few things you can do.
